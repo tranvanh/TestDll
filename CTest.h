@@ -1,12 +1,14 @@
-#ifndef MultiLeap_h
-#define MultiLeap_h
+#ifndef CTest_h
+#define CTest_h
 
-#ifdef MULTILEAP_GESTURE_RECOGNITION_EXPORTS
-#define MULTILEAP_GESTURE_RECOGNITION_API extern "C" __declspec(dllexport)
+#ifdef CTEST_EXPORTS
+#define CTEST_API extern "C" __declspec(dllexport)
 #else
-#define MULTILEAP_GESTURE_RECOGNITION_API extern "C" __declspec(dllimport)
+#define CTEST_API extern "C" __declspec(dllimport)
 #endif
 
-MULTILEAP_GESTURE_RECOGNITION_API void printTest();
+//MULTILEAP_GESTURE_RECOGNITION_API void Multileap_RecognitionOnFrame(const LEAP_TRACKING_EVENT* frame, const unsigned deviceId, float deviation, void* context);
+CTEST_API void printTest();
+CTEST_API void predictionTest();
 
-#endif /* MultiLeap_h */
+#endif /* CTest_h */

@@ -92,16 +92,11 @@ namespace cppflow {
 
         int tag_len = 1;
         const char* tag = "serve";
-        try {
-            this->session = { TF_LoadSessionFromSavedModel(session_options.get(), run_options.get(), filename.c_str(),
+        this->session = { TF_LoadSessionFromSavedModel(session_options.get(), run_options.get(), filename.c_str(),
                                 &tag, tag_len, this->graph.get(), meta_graph.get(), context::get_status()),
                          session_deleter };
-            status_check(context::get_status());
-        }
-        catch (...) {
-            std::cout << "exception" << std::endl;
-        }
-        
+
+        status_check(context::get_status());
     }
 
     inline std::vector<int64_t> model::get_operation_shape(const std::string& operation) const {

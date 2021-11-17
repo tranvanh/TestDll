@@ -44,7 +44,7 @@ extern "C" {
 // --------------------------------------------------------------------------
 // TF_DataType holds the type for a scalar value.  E.g., one slot in a tensor.
 // The enum values here are identical to corresponding values in types.proto.
-enum class TF_DataType {
+typedef enum TF_DataType {
   TF_FLOAT = 1,
   TF_DOUBLE = 2,
   TF_INT32 = 3,  // Int32 tensors are always in 'host' memory.
@@ -69,7 +69,7 @@ enum class TF_DataType {
   TF_VARIANT = 21,
   TF_UINT32 = 22,
   TF_UINT64 = 23,
-};
+} TF_DataType;
 
 // TF_DataTypeSize returns the sizeof() for the underlying type corresponding
 // to the given TF_DataType enum value. Returns 0 for variable length types
