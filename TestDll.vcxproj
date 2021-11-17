@@ -148,9 +148,6 @@ xcopy /y $(SolutionDir)includes\tensorflow2\*.dll "$(OutDir)"</Command>
   <ItemGroup>
     <ClCompile Include="TestDll.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CTest.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
